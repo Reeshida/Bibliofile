@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "!207Weeble",
+    "password": "Trilogy2018",
     "database": "library_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

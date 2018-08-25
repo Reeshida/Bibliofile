@@ -5,39 +5,12 @@ body {
 #logo {
 	margin: 0 auto;
 	display: block;
-	width: 500px;
+	width: 35%;
 	height: 250px;
-}
-
-#dropdown {
-	float: right;
-
-}
-
-#addToForSale {
-
-    width: 1000px;
-    height: 70px;
-}
-
-#addToForSaleButton {
-    width: 400px;
-    height: 70px;
-}
-
-#addToWishlist {
-    width: 1000px;
-    height: 70px;
-
-}
-
-#addToWishlistButton {
-    width: 400px;
-    height: 70px;
+	padding-top: 10px;
 }
 
 #main {
-	
 	margin: 30px 10% 80px 10%;
 	background-image: url("../images/parchment.jpg");
 	border-radius: 15px;
@@ -71,7 +44,7 @@ body {
 }
 
 .btn-primary {
-	margin: 10px 0px;
+	margin: 10px 3% 10px 0px;
 	font-family: 'IM Fell English SC', serif;
 	font-size: 30px;
 	background-color: darkred;
@@ -217,6 +190,8 @@ a.nav-link.active.show {
 	margin-left: 3%;
 }
 
+/* start search results styling */
+
 #searchResults {
 	margin: 30px 10% 80px 10%;
 	background-image: url("../images/parchment.jpg");
@@ -245,4 +220,79 @@ a.nav-link.active.show {
 	background-color: transparent;
 	color: darkred;
 	border: 1px solid black;
+}
+
+/* start success styling */
+
+#success {
+	margin: 30px 10% 80px 10%;
+	background-image: url("../images/parchment.jpg");
+	border-radius: 15px;
+	border: 1px darkred solid;
+	font-family: 'IM Fell English SC', serif;
+	padding-bottom: 20px;
+}
+
+.afterSearchNavIcons a {
+	color: black;
+	margin-right: 5%;
+}
+
+#searchAgain {
+	color: black;
+	margin-right: 5%;
+}
+
+/* Icons for nav bar in home.html (#success), library.html, for-sale.html, and wishlist.html were sourced and licensed from:
+				License: https://creativecommons.org/licenses/by/3.0/legalcode
+				https://www.iconfinder.com/Chanut-is
+				https://www.iconfinder.com/Oppossume
+				https://www.iconfinder.com/bogdanrosu
+				https://www.iconfinder.com/iconofoxy 
+				http://www.picol.org/
+*/
+
+.headerText {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.navIcons {
+	float: right;
+}
+
+.navIcon:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid black;
+}
+
+/* start library, for-sale, and wishlist list item styling */
+
+ul {
+	list-style: none;
+}
+
+li {
+	margin-top: 10px;
+	font-family: 'Cormorant', serif;
+	font-size: 25px;
+	color: black;
+}
+
+.libraryDelete, .wishlistDelete, .forSaleDelete, .maxPriceUpdate, .minPriceUpdate, .forSaleEdit, .wishlistEdit {
+	margin-right: 10px;
+	padding: 3px;
+}
+
+.libraryDelete:hover, .wishlistDelete:hover, .forSaleDelete:hover, .maxPriceUpdate:hover, .minPriceUpdate:hover, .forSaleEdit:hover, .wishlistEdit:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid darkred;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.bold {
+	font-weight: bold;
 }

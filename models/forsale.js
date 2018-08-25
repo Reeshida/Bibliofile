@@ -2,29 +2,15 @@ module.exports = function(sequelize, DataTypes) {
 
     const forsale = sequelize.define('forsale', {
         
-        ISBN_10: {
-            type: DataTypes.INTEGER,
-            allowNull: true
-        },
-        ISBN_13: {
-            type: DataTypes.INTEGER,
+        ISBN: {
+            type: DataTypes.STRING,
             allowNull: true
         },
         Title: {
             type: DataTypes.STRING,
-            allowNull: false
         },
         Author: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        Series: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
-        Format: {
-            type: DataTypes.STRING,
-            allowNull: true
+            type: DataTypes.STRING
         },
         Min_Price: {
             type: DataTypes.DECIMAL (10, 2),

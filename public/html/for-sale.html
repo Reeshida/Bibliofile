@@ -5,10 +5,11 @@
   <title>Bibliofile For Sale</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>	
   <link type="text/css" href="../css/style.css" rel="stylesheet" media="screen"> 
   <link href="https://fonts.googleapis.com/css?family=Cormorant|IM+Fell+English+SC" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  <script src = "../js/for-sale-logic.js"></script>
 </head>
 
 <body>
@@ -17,35 +18,31 @@
 
   <div class="card text-center" id="forSaleMain">
   
-    <div class="card-header">✒︎ For Sale
-      <class id="dropdown">
-				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  Dropdown link
-				</a>
-			  
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				  <a class="dropdown-item" href="#">For Sale</a>
-				  <a class="dropdown-item" href="#">Wish List</a>
-				  <a class="dropdown-item" href="#">Library</a>
-				</div>
-			  </div>
+    <div class="card-header">
+      <p class="headerText">✒︎ For Sale</p>
+      <div class="navIcons">
+        <a href="/"><img src="../images/icon-home.png" class="navIcon"></a>
+        <a href="/library"><img src="../images/icon-library.png" class="navIcon"></a>
+        <a href="/wishlist"><img src="../images/icon-wishlist.png" class="navIcon"></a>
+      </div>
+    </div>
       
       <div class="card-body">
         <h3 class="card-title">Review and edit your books for sale:</h3>
-        <div>
-          
-          <ul id="forSaleContents"></ul>
-          
+        <div>          
+          <ul id="forSaleContents"></ul>          
         </div>
       </div>
 
-      <div class="card-footer">"Information is not knowledge, and knowledge is not wisdom.  Reading -  even browsing - an old book can yield sustenance denied by a database search."<br>✒︎ James Gleick</div>
+    <div class="card-footer">"Information is not knowledge, and knowledge is not wisdom.  Reading -  even browsing - an old book can yield sustenance denied by a database search."<br>✒︎ James Gleick</div>
 
   </div>
  
 </body>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 

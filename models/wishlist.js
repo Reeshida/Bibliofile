@@ -2,29 +2,15 @@ module.exports = function(sequelize, DataTypes) {
 
     const Wishlist = sequelize.define('Wishlist', {
         
-        ISBN_10: {
-            type: DataTypes.INTEGER,
-            allowNull: true
-        },
-        ISBN_13: {
-            type: DataTypes.INTEGER,
-            allowNull: true
+        ISBN: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         Title: {
             type: DataTypes.STRING,
-            allowNull: false
         },
         Author: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        Series: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
-        Format: {
-            type: DataTypes.STRING,
-            allowNull: true
+            type: DataTypes.STRING
         },
         Max_Price: {
             type: DataTypes.DECIMAL (10, 2),

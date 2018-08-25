@@ -14,21 +14,10 @@
 	
 	<img src="../images/logo.jpg" alt="logo" id="logo">
 	
-	<div id="main" style="display: block">
+	<div id="main" style="display: none">
 		<div class="container mt-3">
 			<p id="welcome">✒︎Welcome </p>
-			<class id="dropdown">
-				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  Dropdown link
-				</a>
-			  
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				  <a class="dropdown-item" href="#">For Sale</a>
-				  <a class="dropdown-item" href="#">Wish List</a>
-				  <a class="dropdown-item" href="#">Library</a>
-				</div>
-			  </div>
-			<br>
+			
 			<!-- Nav tabs -->
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
@@ -82,13 +71,17 @@
 		</div>
 	</div>	
 	
-	<!-- style="display: none" -->
-	
 	<div class="card" id="selectNextAction" style="display: none">
 		<div class="card-header">
-			✒︎ Welcome, reader!
+			<p class="headerText">✒︎ Welcome<span id="insertUsername"></span>!</p>
+			<div class="navIcons">
+				<a href="/library"><img src="../images/icon-library.png" class="navIcon"></a>
+				<a href="/for-sale"><img src="../images/icon-for-sale.png" class="navIcon"></a>
+				<a href="/wishlist"><img src="../images/icon-wishlist.png" class="navIcon"></a>
+			</div>
 		</div>
-		<h4>Enter your ten or thirteen digit ISBN, no dashes needed.</h4>
+		
+		<h4>Enter your ten or thirteen digit ISBN, no dashes.</h4>
 		<form>
 			<div class="form-group">
 				<label for="isbnInput">Search by ISBN:</label>
@@ -123,13 +116,24 @@
 					<button class="btn btn-outline-secondary" type="button" id="addToWishlistButton">Add to Wishlist</button>
 				</div>
 			</div>
-			<button type="button" class="btn btn-primary btn-lg btn-block">Add to Library</button>
+			<button type="button" class="btn btn-primary btn-lg btn-block" id="addToLibraryButton">Add to Library</button>
 		</div>
-	</div>
+	</div>	
 	
-	
-	<img src="Instructions-01.jpg"alt="instructions">	
-	
+	<div class="card" id="success" style="display: none">
+			<div class="card-header">
+				✒︎ Success!
+			</div>
+			<div class="card-body">
+				<h2 class="card-title">What would you like to do next?</h2>
+				<div class="afterSearchNavIcons">
+						<span id="searchAgain"><img src="../images/icon-book-search.png" class="navIcon">Search again</span>
+						<a href="/library" id="goToLibrary"><img src="../images/icon-library.png" class="navIcon">View library</a>
+						<a href="/for-sale" id="goToForSale"><img src="../images/icon-for-sale.png" class="navIcon">View items for sale</a>
+						<a href="/wishlist" id="goToWishlist"><img src="../images/icon-wishlist.png" class="navIcon">View wishlist</a>
+				</div>
+			</div>
+		</div>	
 
 </body>
 
@@ -179,13 +183,18 @@ function displayResults() {
 	showResults();
 };
 
+function searchAgain() {
+	document.getElementById("success").style.display="none";
+	showActions();
+}
+
 $("#signUp").on("click", hideMain);
 
 $("#signIn").on("click", hideMain);
 
 $("#searchSubmit").on("click", displayResults);
 
-
+$("#searchAgain").on("click", searchAgain);
 
 var returningUserEmail = $("#enterEmail").val().trim();
 var returningUserPassword = $("#enterPassword").val().trim();
@@ -205,12 +214,8 @@ var newUser = {
 	"password": newUserPassword
 };
 
-
-
-
 </script>
 	
-
 <html>
 
 

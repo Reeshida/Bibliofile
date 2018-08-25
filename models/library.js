@@ -2,12 +2,8 @@ module.exports = function(sequelize, DataTypes) {
 
     const Library = sequelize.define('Library', {
         
-        ISBN_10: {
-            type: DataTypes.INTEGER,
-            allowNull: true
-        },
-        ISBN_13: {
-            type: DataTypes.INTEGER (13),
+        ISBN: {
+            type: DataTypes.STRING,
             allowNull: true
         },
         Title: {
@@ -16,12 +12,6 @@ module.exports = function(sequelize, DataTypes) {
         Author: {
             type: DataTypes.STRING
         },
-        Series: {
-            type: DataTypes.STRING
-        },
-        Format: {
-            type: DataTypes.STRING
-        }
     }, {
         freezeTableName: true
        } 
@@ -35,7 +25,6 @@ module.exports = function(sequelize, DataTypes) {
                 }
         });
     };
-
 
     return Library;
 };
